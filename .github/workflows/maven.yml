@@ -1,0 +1,17 @@
+name: lgin to acr
+
+on:
+  push:
+    branches: main
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Login to ACR
+        uses: docker/login-action@v1
+        with:
+          registry: delaysrepo.azurecr.io
+          username: ${{ secrets.AZURE_CLIENT_ID }}
+          password: ${{ secrets.AZURE_CLIENT_SECRET }}
