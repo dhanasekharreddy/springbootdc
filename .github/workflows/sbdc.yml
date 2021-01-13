@@ -44,3 +44,4 @@ jobs:
 
     - run: |
         docker build . -t delaysrepo.azurecr.io/springbootapp:1.0.0
+        docker push delaysrepo.azurecr.io/springbootapp:1.0.0
